@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Serif+Text:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>InMemoryOf</title>
+</head>
+
+<body>
+  <!-- Encabezado -->
+<header class="site-header">
+    <div class="logo-container">
+        <a href="/paginaprin/principal.html"> <!-- Enlace solo en el logo -->
+            <img src="/img/logo.png" alt="Logo del sitio" class="site-logo">
+        </a>
+    </div>
+</header>
+
+
+    <!-- Contenedor principal -->
+    <div class="profile-container">
+        <header class="profile-header">
+            <div class="profile-content">
+                <div class="profile-photo">
+                    <img src="/img/iness.jpeg" alt="Foto de Perfil de Maria Inés" class="profile-picture">
+                </div>
+                <h1 class="profile-name">Maria Inés Arenas Rivera</h1>
+                <p class="profile-dates">1923-2013</p>
+            </div>
+        </header>
+    </div>
+
+    <!-- Pestañas -->
+    <div class="tabs-container">
+        <div class="tab active" data-section="biography">Biografía</div>
+        <div class="tab" data-section="photos">Fotos</div>
+        <div class="tab" data-section="videos">Videos</div>
+    </div>
+
+    <!-- Sección Biografía -->
+    <div id="biography" class="section active">
+        <p>María Inés Arenas Rivera</p> 
+
+            María Inés Arenas Rivera nació el 15 de abril de 1923 en un pequeño pueblo rodeado de montañas y naturaleza vibrante. Desde su infancia, demostró ser una persona noble, trabajadora y apasionada por su entorno. Creció en el seno de una familia humilde, donde aprendió el valor del esfuerzo y la importancia de la unión familiar.
+            
+            A lo largo de su vida, María Inés se destacó por su amor por las tradiciones. Era conocida por sus habilidades culinarias y por preparar recetas ancestrales que heredó de su madre. Su casa siempre estaba llena de aromas deliciosos que reunían a familiares y amigos, convirtiéndola en el corazón de la comunidad.
+            
+            En 1948, contrajo matrimonio con Arturo Guzmán, un agricultor dedicado y cariñoso, con quien tuvo tres hijos.</p>
+            <p> Juntos compartieron más de 50 años de vida, construyendo un hogar lleno de amor y enseñanzas. María Inés también se dedicó a educar a sus hijos con valores de respeto, solidaridad y honestidad, dejando un legado que trascendió generaciones.
+            
+            Durante los años 60, María Inés comenzó a participar activamente en actividades sociales de su localidad, ayudando a personas necesitadas y colaborando con iniciativas para mejorar la calidad de vida en su comunidad. Su espíritu generoso y su calidez humana la convirtieron en un referente para muchos.<p>
+            
+            En sus momentos libres, disfrutaba bordar, leer poesía y cuidar su pequeño jardín lleno de flores que cultivaba con esmero. Las historias que contaba a sus nietos eran memorables, llenas de enseñanzas y anécdotas que transmitían sabiduría.
+            
+            María Inés falleció el 22 de julio de 2013 a la edad de 90 años, dejando un vacío profundo en quienes la conocieron. Su vida fue un ejemplo de bondad, fortaleza y amor incondicional, y su memoria vive en los corazones de sus familiares y amigos.  
+            
+            Siempre será recordada como una mujer extraordinaria, cuya presencia iluminó la vida de todos a su alrededor. 🌹</p>
+    </div>
+
+    <!-- Sección Fotos -->
+    <div id="photos" class="section d-none photos-container">
+        <div class="photo-card">
+            <img src="/img/imagen1.jpeg" alt="Foto 1" class="photo">
+        </div>
+        <div class="photo-card">
+            <img src="/img/imagen2.jpeg" alt="Foto 2" class="photo">
+        </div>
+        <div class="photo-card">
+            <img src="/img/imagen3.jpeg" alt="Foto 3" class="photo">
+        </div>
+        <div class="photo-card">
+            <img src="/img/imagen4.jpeg" alt="Foto 4" class="photo">
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Vista ampliada">
+    </div>
+
+    <!-- Sección Videos -->
+    <div id="videos" class="section d-none">
+        <video src="https://via.placeholder.com/200" controls></video>
+    </div>
+    <footer class="site-footer">
+        <p>&copy; 2024 InMemoryOf. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

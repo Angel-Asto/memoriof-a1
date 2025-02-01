@@ -1,0 +1,278 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    min-height: 100vh; /* El body ocupa al menos el 100% del alto de la pantalla */
+    font-family: 'Raleway', sans-serif; /* Usa la fuente Raleway */
+    background-color: #ebeef3;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    color: #333;
+}
+
+/* Encabezado del sitio */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+   
+    background-color: rgba(0, 0, 0, 1);
+    transition: background-color 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo del logo */
+.site-logo {
+    max-height: 170px; /* Ajusta el tamaño del logo */
+    width: auto;
+    object-fit: contain;
+    margin: 0;
+}
+/* Ajuste para evitar solapamiento */
+.profile-container {
+    flex: 1; /* Se expande para ocupar el espacio disponible */
+    width: 100%;
+    margin-top: 50px; /* Espacio para el header */
+}
+
+/* Encabezado del perfil */
+.profile-header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(51, 51, 51, 0.8)), url('/img/bosque.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+p.profile-dates {
+    opacity: 0.6; /* Reduce la opacidad al 50%, haciendo el texto más claro */
+}
+
+.profile-photo .profile-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de biografía */
+#biography {
+    padding: 20px;
+    background-color: #f5f5f5; /* Blanco oscuro para contraste */
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Borde sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    margin: 20px auto;
+}
+
+#biography h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#biography p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+p {
+    font-family: 'PT Serif', serif; /* Usa la fuente PT Serif */
+}
+
+/* Contenedor de pestañas */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+/* Estilos de las pestañas */
+.tab {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #ccc;
+    background-color: white;
+    color: black;
+}
+
+.tab:last-child {
+    border-right: none;
+}
+
+.tab.active {
+    background-color: #c70c0c;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #c70c0c;
+    color: white;
+}
+
+/* Sección de fotos */
+.photos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Uniforme */
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imágenes uniformes */
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Galería de videos */
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.videos-container video {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: auto; /* Siempre al final */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .photos-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Más pequeñas en móviles */
+        gap: 10px;
+    }
+
+    .photo-card {
+        height: 150px; /* Altura más pequeña */
+    }
+
+    #biography {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .photos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-card {
+        height: 120px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}

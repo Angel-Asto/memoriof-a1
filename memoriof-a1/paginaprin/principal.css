@@ -1,0 +1,464 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ebeef3;
+}
+
+/* Contenedor general */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: #0f0f0f; /* Fondo negro */
+    color: #f0c410; /* Texto dorado */
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #f0c410;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el logo horizontalmente */
+    height: 100%; /* Altura alineada con la barra */
+    flex-grow: 1; /* Permite que el logo ocupe el espacio necesario */
+}
+
+/* Estilo del logo */
+.site-logo {
+    max-height: 50px; /* Ajusta la altura máxima del logo */
+    width: auto; /* Mantiene las proporciones del logo */
+    object-fit: contain; /* Evita la distorsión del logo */
+    margin: 0; /* Quita cualquier margen adicional */
+    display: block;
+}
+.logo {
+    width: 220px;
+}
+
+/* Barra principal */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro transparente */
+    height: 70px; /* Altura fija de la barra */
+    padding: 0 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.main-header.scrolled {
+    height: 60px; /* Altura reducida al hacer scroll */
+}
+
+/* Menú desplegable */
+.nav-links {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro transparente constante */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para visibilidad */
+}
+
+.nav-links.active {
+    display: flex; /* Visible cuando se activa */
+    transform: translateY(0); /* Asegura que se vea al activar */
+    opacity: 1; /* Totalmente visible */
+}
+
+
+/* Carrito y menú */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-container .fas {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-container .cart-count {
+    background-color: #c70c0c; /* Rojo */
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Botón MENÚ */
+    .menu-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 13px; /* Reduce el tamaño de la letra */
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.3rem; /* Reduce el espacio entre el icono y el texto */
+        padding: 0.3rem 0.5rem; /* Ajusta el relleno del botón */
+        transition: opacity 0.3s ease;
+    }
+    
+    .menu-button i {
+        font-size: 1rem; /* Reduce el tamaño del icono */
+    }
+    
+    .menu-button:hover {
+        opacity: 0.7; /* Mantén la animación de hover */
+    }
+    
+
+/* Botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #c70c0c;
+    color: white;
+    border: none;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('./img/hero-bg.jpg') no-repeat center/cover; /* Fondo dinámico */
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #704214, #2a1a0a); /* Degradado cálido */
+    color: white;
+    text-align: center;
+}
+
+/* Fondo decorativo con hojas */
+.leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('/img/hoja-removebg-preview.png') no-repeat center/contain; /* Ruta de la hoja */
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+/* Genera múltiples hojas con variaciones */
+.leaf:nth-child(1) {
+    left: 5%;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+.leaf:nth-child(2) {
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+.leaf:nth-child(3) {
+    left: 35%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+.leaf:nth-child(4) {
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+.leaf:nth-child(5) {
+    left: 65%;
+    animation-duration: 11s;
+    animation-delay: 5s;
+}
+.leaf:nth-child(6) {
+    left: 80%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+}
+.leaf:nth-child(7) {
+    left: 95%;
+    animation-duration: 13s;
+    animation-delay: 7s;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        top: -10%; /* Comienza fuera de la vista */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(180deg);
+        opacity: 0.9;
+    }
+    100% {
+        top: 110%; /* Termina fuera de la vista */
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Botones con efectos */
+.cta-buttons .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #c70c0c;
+    color: white;
+    box-shadow: 0 4px 15px rgba(199, 12, 12, 0.5);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.cta-buttons .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-100%, -100%) rotate(45deg);
+    transition: transform 0.3s ease;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.cta-buttons .btn:hover::after {
+    transform: translate(0, 0) rotate(45deg);
+}
+
+
+/* Tienda, Nosotros, Servicios */
+.store-section,
+.about-section,
+.services-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.store-section h2,
+.about-section h2,
+.services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.store-section p,
+.about-section p,
+.services-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Servicios individuales */
+.service {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Contacto */
+.contact-section {
+    padding: 2rem 1rem;
+    background-color: #ebeef3;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background-color: #c70c0c;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #a50a0a;
+}
+
+/* Pie de página */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0f0f0f;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Menú de navegación */
+
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 1rem 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.nav-links.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para el menú al hacer scroll */
+}
