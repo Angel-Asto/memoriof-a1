@@ -78,21 +78,44 @@
         <div class="photo-card">
             <img src="./img/imagen4.jpeg" alt="Foto 4" class="photo">
         </div>
+        <div class="photo-card">
+            <img src="./img/imagen 5.jpeg" alt="Foto 4" class="photo">
+        </div>
     </div>
 
     <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content" alt="Vista ampliada">
-    </div>
+ <!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <button id="prev-btn" class="nav-btn">❮</button>
+    <img id="lightbox-img" class="lightbox-content" alt="Vista ampliada">
+    <button id="next-btn" class="nav-btn">❯</button>
+</div>
 
     <!-- Sección Videos -->
     <div id="videos" class="section d-none">
         <video src="https://via.placeholder.com/200" controls></video>
     </div>
+   <!-- Cuadro de texto para dejar mensajes con nombre -->
+<div class="message-container">
+    <h2>Deja tu mensaje</h2>
+    <form id="message-form">
+        <!-- Campo para el nombre -->
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        
+        <!-- Campo para el mensaje -->
+        <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        
+        <!-- Botón para enviar -->
+        <button type="submit" class="custom-button">Enviar</button>
+    </form>
+</div>
+
     <footer class="site-footer">
         <p>&copy; 2024 InMemoryOf. Todos los derechos reservados.</p>
     </footer>
+    <!-- Cuadro de texto para dejar mensajes -->
+
     <script src="script.js"></script>
 </body>
 

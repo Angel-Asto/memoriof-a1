@@ -51,6 +51,25 @@ body {
     width: 100%;
     margin-top: 50px; /* Espacio para el header */
 }
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 8px;
+}
+
+#next-btn {
+    right: 8px;
+}
 
 /* Encabezado del perfil */
 .profile-header {
@@ -243,6 +262,83 @@ p {
     font-size: 0.9rem;
     margin-top: auto; /* Siempre al final */
     width: 100%; /* Ocupa todo el ancho */
+}
+/* Estilo para el contenedor del formulario de mensaje */
+.message-container {
+    background-color: #ffffff; /* Fondo blanco para que se vea limpio */
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    text-align: left; /* Alineación a la izquierda para los campos */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.3s ease; /* Transición suave cuando se pase el mouse */
+}
+
+/* Estilo para el título del formulario */
+.message-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo para el campo de nombre */
+#name {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espacio entre el nombre y el mensaje */
+    transition: border-color 0.3s ease;
+}
+
+#name:focus {
+    border-color:#690909fa; /* Resaltado azul cuando está en foco */
+    outline: none;
+}
+
+/* Estilo para el textarea del mensaje */
+#message {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    resize: vertical; /* Permitir el redimensionamiento vertical */
+    transition: border-color 0.3s ease;
+}
+
+#message:focus {
+    border-color:#690909fa; /* Resaltado azul cuando está en foco */
+    outline: none;
+}
+
+/* Estilo para el botón de envío */
+.custom-button {
+    background-color: #690909fa; /* Rojo de fondo */
+    color: white; /* Texto blanco */
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* El botón ocupa todo el ancho */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.custom-button:hover {
+    background-color: #690909fa; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* Estilo cuando el botón está enfocado */
+.custom-button:focus {
+    outline: none; /* Eliminar el borde de enfoque */
 }
 
 /* Ajuste responsivo */
