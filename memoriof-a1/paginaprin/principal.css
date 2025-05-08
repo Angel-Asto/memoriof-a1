@@ -156,6 +156,16 @@ body {
         opacity: 0.7; /* Mantén la animación de hover */
     }
     
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Ajusta la opacidad según necesidad */
+  z-index: 1;
+}
 
 /* Botones */
 .btn {
@@ -164,7 +174,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     display: inline-block;
     transition: opacity 0.3s ease;
 }
@@ -196,7 +206,7 @@ body {
     height: 100vh;
     padding: 2rem;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('./img/hero-bg.jpg') no-repeat center/cover; /* Fondo dinámico */
+    url('./img/hero-bg.jpg') no-repeat center/cover;
     color: white;
     text-align: center;
     position: relative;
@@ -209,75 +219,16 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(to bottom, #704214, #2a1a0a); /* Degradado cálido */
-    color: white;
     text-align: center;
+
+    background-image: url('../img/fondo3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-/* Fondo decorativo con hojas */
-.leaf {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: url('/img/hoja-removebg-preview.png') no-repeat center/contain; /* Ruta de la hoja */
-    animation: fall linear infinite;
-    opacity: 0.8;
-}
 
-/* Genera múltiples hojas con variaciones */
-.leaf:nth-child(1) {
-    left: 5%;
-    animation-duration: 8s;
-    animation-delay: 1s;
-}
-.leaf:nth-child(2) {
-    left: 20%;
-    animation-duration: 10s;
-    animation-delay: 2s;
-}
-.leaf:nth-child(3) {
-    left: 35%;
-    animation-duration: 12s;
-    animation-delay: 3s;
-}
-.leaf:nth-child(4) {
-    left: 50%;
-    animation-duration: 9s;
-    animation-delay: 4s;
-}
-.leaf:nth-child(5) {
-    left: 65%;
-    animation-duration: 11s;
-    animation-delay: 5s;
-}
-.leaf:nth-child(6) {
-    left: 80%;
-    animation-duration: 14s;
-    animation-delay: 6s;
-}
-.leaf:nth-child(7) {
-    left: 95%;
-    animation-duration: 13s;
-    animation-delay: 7s;
-}
 
-/* Animación de caída */
-@keyframes fall {
-    0% {
-        top: -10%; /* Comienza fuera de la vista */
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    50% {
-        transform: rotate(180deg);
-        opacity: 0.9;
-    }
-    100% {
-        top: 110%; /* Termina fuera de la vista */
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-}
 
 .hero-section::after {
     content: '';
@@ -292,19 +243,15 @@ body {
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight:lighter;
+    margin-bottom: 5rem;
     z-index: 2;
     animation: fadeInDown 1.5s ease;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 2.0);
+
 }
 
-.hero-section p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    z-index: 2;
-    animation: fadeInUp 1.5s ease;
-}
 
 /* Botones con efectos */
 .cta-buttons .btn {
@@ -352,6 +299,13 @@ body {
     transition: transform 0.3s ease;
     z-index: -1;
     border-radius: 50%;
+}
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* <-- Añade esto para separar los botones */
+    justify-content: center;
+    z-index: 2;
 }
 
 .cta-buttons .btn:hover::after {

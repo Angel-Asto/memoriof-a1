@@ -31,13 +31,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-    const heroSection = document.querySelector(".hero-section");
-
-    // Animación de fondo en el Hero Section
-    let scrollOffset = 0;
-    window.addEventListener("scroll", () => {
-        scrollOffset = window.scrollY * 0.5;
-        heroSection.style.backgroundPosition = `center ${scrollOffset}px`;
-    });
-});
